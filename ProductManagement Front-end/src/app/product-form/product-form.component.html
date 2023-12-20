@@ -1,0 +1,40 @@
+<!-- src/app/product-form/product-form.component.html -->
+<div>
+    <h2>Product Form</h2>
+    <form (ngSubmit)="onSubmit()">
+      <!-- Form fields here -->
+  
+      <button type="submit">Submit</button>
+      <button type="button" (click)="resetForm()">Reset</button>
+    </form>
+  
+    <hr>
+  
+    <h2>Product List</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.quantity }}</td>
+          <td>
+            <button type="button" (click)="editProduct(product.id)">Edit</button>
+            <button type="button" (click)="deleteProduct(product.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,20 @@
+/* app.component.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Light grey background for the entire body */
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #007bff;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .router-outlet {
+    padding: 20px;
+  }
+  
